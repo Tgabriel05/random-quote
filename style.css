@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+body{
+  background-color: #111729;
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+}
+.content{
+  width: 544px;
+  min-height: 209px;
+  background: #20293A;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  user-select: none;
+  padding-bottom: 10px;
+  position: relative;
+}
+.container{
+  width: 544px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  justify-content: center;
+  text-align: center;
+}
+.content img{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+.content #author{
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-top: 30px;
+  margin-bottom: 5px;
+}
+#categories{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #6466E9;
+}
+#categories > p{
+  border: 1px solid #6466E9;
+  padding: 4px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.content #quote{
+  color: #97A3B6;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  padding: 0 30px;
+}
+/*Out of the content*/
+.options{
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  position: relative;
+}
+.options img{
+  border: 1px solid #4A5567;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.options img:nth-child(1){
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.options img:nth-child(2){
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.options img:nth-child(1),
+.options img:nth-child(2){
+  transition: all 0.3s;
+}
+.options img:nth-child(2):hover{
+  background: #b3bcca37;
+}
+.options img:nth-child(1):hover{
+  background: #b3bcca37;
+}
+
+/*ELEMENT COPIED*/
+
+#copied{
+  position: absolute;
+  color: #fff;
+  font-weight: 600;
+  bottom: 50px;
+  right: 35%;
+  background-color: #6466e972;
+  padding: 0 10px;
+  border-radius: 20px;
+  overflow: none;
+  transition: all 0.5s ease-in;
+  display: none;
+}
+
+
+/*MEDIA QUERY*/
+
+@media screen and (max-width:640px){
+  .container,
+  .content{
+    width: 350px;
+  }
+  .content #quote{
+    font-size: 1.2rem;
+  }
+  .options img{
+    padding: 6px 10px;
+  }
+  #copied{
+    bottom: 50px;
+    right: 27%;
+    padding: 0 5px;
+    border-radius: 15px;
+  }
+  #copied p{
+    padding: 10px;
+    margin: 0;
+    font-size: 0.855rem;
+  }
+}
